@@ -1,0 +1,32 @@
+
+#gallery-container
+{
+	min-height: 300px;
+	height: auto;
+	display: block;
+	margin-left: 20px;
+}
+
+#project-container
+{
+	display: table-cell;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	width: 320px;
+}
+
+#non-selectable-image
+{
+	border-style: none;
+	border-radius:20px;
+	width: 320px;
+	height: 150px;
+	margin: 10px;
+}
+
+#gallery-image-title
+{
+	vertical-align: bottom;
+	color: white;
+}

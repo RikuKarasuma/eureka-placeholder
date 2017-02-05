@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Portfolio: LiamAutoMechanic. :: Software Eureka </title>
+
+    <!-- Pace script resources -->
+    <script data-pace-options='{ "ajax": false }' src='../javascript/pace.js'></script>
+    <link href="../design/loading-bar.css" rel="stylesheet" />
+
+    <!-- Design resources -->
+    <link rel="stylesheet" type="text/css" href="../design/design.css">
+    <link rel="stylesheet" type="text/css" href="../design/image.css">
+    <link href="../design/software-eureka-favicon.png" rel="shortcut icon">
+  </head>
+
+
+  <body>
+      <!-- Page wrapper-->
+  		<div id="wrapper">
+			<!-- Page header-->
+			<div id="header">
+			  <!-- Page Logo -->
+			  <a href="../Home.html">
+				<div id="logo"></div>
+			  </a>
+			  <!-- Navigation Links-->
+			  <div id="navigation">
+				  <!-- Links as list -->
+				  <ul>
+					<li alt="Home">
+						<a href="../Home.html">
+							<b>Home</b>
+						</a>
+					</li>
+					<li alt="Portfolio">
+						<a href="../Portfolio.html">
+							<b>Portfolio</b>
+						</a>
+					</li>
+					<li alt="Resume">
+						<a href="../Resume.pdf">
+							<b>Resume</b>
+						</a>
+					</li>
+					<li alt="Tips & Tricks">
+						<a href="../Tips-and-tricks.html">
+							<b>Tips and tricks</b>
+						</a>
+					</li>
+					<li alt="Contact">
+						<a href="../Contact.html">
+							<b>Contact</b>
+						</a>
+					</li>
+				</ul>
+			  </div>
+			</div>
+
+			<!-- Content background container -->
+			<div id="content-background">
+				<!-- Content container -->
+				<div id="content">
+
+					<!-- Content wrapper -->
+					<div id="content-wrapper">
+						<div id="main-content">
+							<h2> LiamAutoMechanic</h2>
+							</br>
+							<center><img src="../images/liam-auto-mechanic/liam-auto-mechanic-logo-small.png" style="border-radius:20px;"/></center>
+							<span style="display:block;text-align:center;">Site landing page.</span>
+							</br>
+							</br>
+							</br>
+							<center>
+								<h1 id="index">Index</h1>
+								<a href="#intro">Intro</a>
+								</br>
+								<a href="">Paypal integration(Coming soon)</a>
+								</br>
+								<a href="">Videos(Coming soon)</a>
+								</br>
+							</center>
+							</br>
+							</br>
+							</br>
+							<h3 id="intro">What is LiamAutoMechanic?</h3>
+							<p>
+								liamautomechanic.com is a website created for a YouTuber with the same name. He approached me looking for a small website in order to heighten
+	                			his online presence and provide an innovative tool creation service, from which he would design mechanic tools never conceived before to sell
+	                			to his subscribers.
+							</p>
+							
+							<a href="http://www.liamautomechanic.net">Click here to view the site.</a>
+
+							<h3>Features</h3>
+							<p>
+				                The site was designed for selling tools using the PayPal API, forwarding users to mechanic tutorials on YouTube and using Google Adsense to
+				                increase online advertising revenue.
+							</p>
+
+							<h3>Stage</h3>
+							<p>
+							  	The site has long since been finished. There is talk of continued development by adding more tools to sell although nothing has come of this yet.
+							</p>
+
+							<h3>Support</h3>
+							<p>
+							  	This site has my continued support in terms of Quality Assurance, Virtual Private Server and Domain management.
+							</p>
+
+							<h3>Roles, responsibilities & challenges</h3>
+							<p>
+				                My roles on this project were server developer, QA tester, website designer and administrator. My responsibilities were finding the perfect
+				                VPS host, domain name provider, payment provider and posting new tools to sell whenever they are conceived.
+							</p>
+							<p>
+				                The challenges in creating this website were setting up an Apache Http and Tomcat server via SSH. Payment integration was the most difficult
+				                challenge of all, Paypals lagacy API was used, it was considered the most appropriate tool for the job as the robustness of their newer API
+				                wasn't required.
+			                </p>
+				            <p>
+				                The most interesting challenge I believe is the Paypal Notification workaround I had to develop because Paypal refuse to support Java Servlets
+				                and the server was build upon Java. However they did support PHP, so I had to use a PHP script inbetween the HTTP and Tomcat Server. Once a
+				                payment was received from the customer, paypal would notify a specific URL on the site which was not apart of the Tomcat Server, this script
+				                would verify the payment with paypal and once verified would notify the Tomcat server that a payment has been received. The server would then
+				                use the details from the customers paypal account to email the customer that their payment has been verified and that their product was on the
+				                way.
+							</p>
+							</br>
+							<hr>
+							<h2>More about liamautomechanic coming soon!</h2>
+							</br>
+						</div>
+					</div>
+					<!-- Footer padding -->
+					<div id="footer-padding"></div>
+					<!-- Footer -->
+					<div id="footer">
+						<p> All Rights Reserved (C) 2017 Owen McMonagle</p>
+					</div>
+
+				</div>
+			</div>
+	</div>
+	<script type="text/javascript" src="javascript/main.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Tips and Tricks: How to swap two variables without using a third in Java. :: Software Eureka </title>
+    <!-- Pace script resources -->
+    <script data-pace-options='{ "ajax": false }' src='../javascript/pace.js'></script>
+    <link href="../design/loading-bar.css" rel="stylesheet" />
+
+    <!-- Design resources -->
+    <link rel="stylesheet" type="text/css" href="../design/design.css">
+    <link href="../design/software-eureka-favicon.png" rel="shortcut icon">
+  </head>
+
+
+  <body>
+      <!-- Page wrapper-->
+  		<div id="wrapper">
+			<!-- Page header-->
+			<div id="header">
+			  <!-- Page Logo -->
+			  <a href="../Home.html">
+				<div id="logo"></div>
+			  </a>
+			  <!-- Navigation Links-->
+			  <div id="navigation">
+				  <!-- Links as list -->
+				  <ul>
+					<li alt="Home">
+						<a href="../Home.html">
+							<b>Home</b>
+						</a>
+					</li>
+					<li alt="Portfolio">
+						<a href="../Portfolio.html">
+							<b>Portfolio</b>
+						</a>
+					</li>
+					<li alt="Resume">
+						<a href="../Resume.pdf">
+							<b>Resume</b>
+						</a>
+					</li>
+					<li alt="Tips & Tricks">
+						<a href="../Tips-and-tricks.html">
+							<b>Tips and tricks</b>
+						</a>
+					</li>
+					<li alt="Contact">
+						<a href="../Contact.html">
+							<b>Contact</b>
+						</a>
+					</li>
+				</ul>
+			  </div>
+			</div>
+
+			<!-- Content background container -->
+			<div id="content-background">
+				<!-- Content container -->
+				<div id="content">
+
+					<!-- Content wrapper -->
+					<div id="content-wrapper">
+						<div id="main-content">
+							<h3> Tips and Tricks: Securing your classes. The Final keyword in Java.</h3>
+							<br>
+							<p>
+								One of the most overlooked principals in development among students and junior developers is scope. Namely class and package scope. In this article we will
+								be going over how the Final keyword should be used to prevent unwanted access to classes or some methods within those classes. 
+							</p>
+							
+							<p>
+								I know what some of you are thinking. Wait can't we just access all classes, methods and variables using reflection anyway so wouldn't this be moot. Well 
+								yes, by default if you didn't create a security manager to protect against unauthorised reflection use then your code is at huge risk even with access
+								protections such as the keyword final. Always remember to create a security manager at the beginning of your application.  
+							</p>
+
+							<p>
+								Now because the final keyword can be used four different ways, I'm going to state below those ways before we get into the meat of things. 
+							</p>
+
+
+							<ul style="list-style-type: none;">
+								<li>A final class can't be sub-classed.</li>
+								<li>A final method can't be overridden.</li>
+								<li>A final variable can only be instantiated once.</li>
+								<li>When an inner class is defined within a method, you must make all local method variables it uses from outside that inner class as final.</li>
+							</ul>
+							<p>
+								We will be focusing on just the first two. Which if not used could lead to malicious implementations of that class if malicious code
+								ever got within that JVM. 
+							</p>
+							<p>
+								There are two reasons to get familiar with the word Final. One is to prevent access to the classes and method/s and two is to signal to other developers coming
+								after you that a class, method or variable is immutable by design and should not be tampered with unless necessary.
+							</p>
+							<br>
+							<p>
+								Here below we have our insecure class open to sub-classing by any object. Please follow the code comment to get an understanding of
+								what is happening.
+							</p>
+							<br>
+							<script src="https://gist.github.com/RikuKarasuma/fb05e20cfb86247f2488e27268caa598.js"></script>
+							<br>
+							<p>
+								Now I will show you how the above class is exploited.
+							</p>
+							<br>
+							<script src="https://gist.github.com/RikuKarasuma/d023e78c62996acd738a2500fc5c9e87.js"></script>
+							<br>
+							<p>
+								In the next class we will see how to prevent the above two scenarios from occurring with just a single word. 
+							</p>
+							<br>
+							<script src="https://gist.github.com/RikuKarasuma/6b99c97afa1d62fc1e0c424191c7c81a.js"></script>
+							<br>
+							<p>
+								Realistically, we won't be able to make the class final all of the time. As we might need to override a method within for different implementations across
+								our program. So instead we make it as tight-lipped as possible by defining every method we know won't be overridden as final. This plugs all security holes
+								(From a design standpoint) except the ones we create ourselves. Below is an example of how we can protect just the methods we want. 
+							</p>
+							<br>
+							<script src="https://gist.github.com/RikuKarasuma/83912981c4e332515384d8c871dfd39f.js"></script>
+							<br>
+						</div>
+					</div>
+					<!-- Footer padding -->
+					<div id="footer-padding"></div>
+					<!-- Footer -->
+					<div id="footer">
+						<p> All Rights Reserved (C) 2017 Owen McMonagle</p>
+					</div>
+
+				</div>
+			</div>
+	</div>
+	<script type="text/javascript" src="javascript/main.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Portfolio: Android Cast. :: Software Eureka </title>
+    <!-- Pace script resources -->
+    <script data-pace-options='{ "ajax": false }' src='../javascript/pace.js'></script>
+    <link href="../design/loading-bar.css" rel="stylesheet" />
+
+    <!-- Design resources -->
+    <link rel="stylesheet" type="text/css" href="../design/design.css">
+    <link href="../design/software-eureka-favicon.png" rel="shortcut icon">
+  </head>
+
+
+  <body>
+      <!-- Page wrapper-->
+  		<div id="wrapper">
+			<!-- Page header-->
+			<div id="header">
+			  <!-- Page Logo -->
+			  <a href="../Home.html">
+				<div id="logo"></div>
+			  </a>
+			  <!-- Navigation Links-->
+			  <div id="navigation">
+				  <!-- Links as list -->
+				  <ul>
+					<li alt="Home">
+						<a href="../Home.html">
+							<b>Home</b>
+						</a>
+					</li>
+					<li alt="Portfolio">
+						<a href="../Portfolio.html">
+							<b>Portfolio</b>
+						</a>
+					</li>
+					<li alt="Resume">
+						<a href="../Resume.pdf">
+							<b>Resume</b>
+						</a>
+					</li>
+					<li alt="Tips & Tricks">
+						<a href="../Tips-and-tricks.html">
+							<b>Tips and tricks</b>
+						</a>
+					</li>
+					<li alt="Contact">
+						<a href="../Contact.html">
+							<b>Contact</b>
+						</a>
+					</li>
+				</ul>
+			  </div>
+			</div>
+
+			<!-- Content background container -->
+			<div id="content-background">
+				<!-- Content container -->
+				<div id="content">
+
+					<!-- Content wrapper -->
+					<div id="content-wrapper">
+						<div id="main-content">
+							<h2> Android Cast Media Server & Client</h2>
+							</br>
+							<center><img src="../images/android-cast/android-cast-logo-small.png" width="600px" style="border-radius:20px;"/></center>
+							<span style="display:block;text-align:center;">Application logo.</span>
+							</br>
+							</br>
+							</br>
+							<center>
+								<h1 id="index">Index</h3>
+								<a href="#intro">Intro</a>
+								</br>
+								<a href="#client_discovery">Client: Discovery</a>
+								</br>
+								<a href="#client_login">Client: Login</a>
+								</br>
+								<a href="#client_playlist">Client: Playlist</a>
+								</br>
+								<a href="#client_search">Client: Search</a>
+								</br>
+								<a href="#client_controller">Client: Controller</a>
+								</br>
+								</br>
+								<a href="#server_main_menu">Server: Main Menu</a>
+								</br>
+								<a href="#server_settings_menu">Server: Settings Menu</a>
+								</br>
+								<a href="#server_out_of_process_player">Server: Out of Process Player</a>
+								</br>
+								<a href="#licensing_and_distribution">Licensing and Distribution</a>
+							</center>
+							</br>
+							</br>
+							</br>
+							<h3 id="intro">What is Android Cast?</h3>
+							<p>
+							  Android Cast is a Windows Media Server and Android Media Client. It is capable of allowing real time control of Media such as Movies, Shows and Music which
+							  makes the server perfect for bringing the computer to the living room essentially turning your computer into a TV and your Android Device into the remote.
+							</p>
+
+							<h3>Features</h3>
+							<p>
+							  Android Cast has a robust feature list including real time file discovery, SHA384 password/login security, wireless media player and much more! Below I go
+							  through each major functionality that the server has, detailing what it can do.
+							</p>
+
+							<h3>Stage</h3>
+							<p>
+							  At the moment, Android Cast is in beta and undergoing testing on various systems before I release it to the Android Market. The name "Android Cast" will
+							  most likely be changed before public release as well.
+							</p>
+
+							<h3>Support</h3>
+							<p>
+							  The client and server is still in its infancy and is only version 1.1. There is still many features planned; because of this I plan to release it with
+							  a subscription model, so that support can continue in the future and it won't be abandoned after release.
+							</p>
+							
+							<h3>Update (Jan 2017)</h3>
+							<p>
+							  This entire project has been re-branded and redesigned since this article was written, this page will be updated to reflect that as soon as I find time. 
+							  In the mean time, please view the website <a href="http://www.couchcastapp.com">Couch Cast</a> in order to see the current direction of the project. 
+							</p>
+							</br>
+							<hr>
+							<h2>Android Cast Client</h2>
+							</br>
+
+							<center id="client_discovery"><a href="../images/android-cast/android-cast-server-list.png"><img alt="Client Server discovery" src="../images/android-cast/android-cast-server-list.png" width="600px" style="border-radius:20px;"/></a></center>
+							<h3>Client Server discovery</h3>
+							<p>
+							  Once the Android client has started, you will be presented with an empty playlist. If there is no previous session detected, you will have to use the
+							  connection menu available by swiping from the left corner or pressing the connection menu button on the top-left corner.
+							</p>
+							<p>
+							  This will present you with a list of media servers by scanning your local area network using the Simple Service Discovery Protocol. This protocol requires
+							  that UPnP be enabled in your modem or it will not function.
+							</p>
+							<p>
+							  Once you've found the Media Server you wish to connect to, tapping on the server name will bring you to the login screen which is explained in the next
+							  part.
+							</p>
+							<a href="#index">Back to index</a>
+							</br>
+							<hr>
+							</br>
+
+							<center id="client_login"><a href="../images/android-cast/android-cast-server-login.png"><img alt="Client Server login" src="../images/android-cast/android-cast-server-login.png" width="600px" style="border-radius:20px;"/></a></center>
+							<h3>Client Server login</h3>
+							<p>
+							  After tapping on a Media Server that you wish to connect to, you will be presented with a login screen. This login screen requires your password in order
+							  to verify with the server (Default password is "password"). A password can be set up on the server if you wish to change the default, which is recommended.
+							</p>
+							<p>
+							  Once the password has been inputted into the text area; clicking Confirm or Done buttons will attempt the connection with the Media Server. Once completed,
+							  the login screen will disappear and if the connection is successful, a little red "Connected" label will appear next to the server name on the server list
+							  like this.
+							</p>
+							<center><img alt="Client Server connected" src="../images/android-cast/android-cast-server-connected.png" style="border-radius:20px;"/></center>
+							<p>
+							  If the connection was not successful, a little pop up (Android OS Toast) will inform as to the reason why. There is two situational messages that will guide
+							  you to the problem. Here is the first and it will say "Not Authorised", this means that the password validation has failed and that the password you entered
+							  was incorrect.
+							</p>
+							<center><img alt="Client Server not connected" src="../images/android-cast/android-cast-server-not-connected-0.png" style="border-radius:20px;"/></center>
+							<p>
+							  The second message is more complicated and it states "Could not connect, server may not be running". This error message implies that there is a connection
+							  issue somewhere in the network and that it must be fixed before a connection can be made. Here is what it looks like.
+							</p>
+							<center><img alt="Client Server not connected" src="../images/android-cast/android-cast-server-not-connected-1.png" style="border-radius:20px;"/></center>
+							<a href="#index">Back to index</a>
+							</br>
+							<hr>
+							</br>
+
+							<center id="client_playlist"><a href="../images/android-cast/android-cast-media-playlist.png"><img alt="Client Server playlist" src="../images/android-cast/android-cast-media-playlist.png" width="600px" style="border-radius:20px;"/></a></center>
+							<h3>Client Server playlist</h3>
+							<p>
+							  This is the playlist of each media file found by the server. The server syncs the list in real time, whenever a new change has been detected in one of the
+							  monitored directories, a message is sent to the File Server which then relays the new list to the client for updating.
+							</p>
+							<p>
+							  Since real time file searching and validation can take alot of CPU power, it takes a toll on lower end machines when searching through thousands of files.
+							  For this reason I've included an optional delay slider which allows for specifing a delay between folder searches. This helps keep the search algorithm
+							  scalable on weaker machines at the expense of faster file searching and validation. The slider is located within the settings menu of the server.
+							</p>
+							<a href="#index">Back to index</a>
+							</br>
+							<hr>
+							</br>
+
+							<center id="client_search"><a href="../images/android-cast/android-cast-search-results.png"><img alt="Client search results" src="../images/android-cast/android-cast-search-results.png" width="600px" style="border-radius:20px;"/></a></center>
+							<h3>Client search results</h3>
+							<p>
+							  At the moment, there is only one linear playlist. This can make finding a single file within thousands of files a tedious task; so a search function was
+							  implemented. This search function takes an exact filename or phrase and returns any matches within a dialog list for selection.
+							</p>
+							<a href="#index">Back to index</a>
+							</br>
+							<hr>
+							</br>
+
+							<center id="client_controller"><a href="../images/android-cast/android-cast-media-player.png"><img alt="Client Server media player controller" src="../images/android-cast/android-cast-media-player.png" width="600px" style="border-radius:20px;"/></a></center>
+							<h3>Client Server media player controller</h3>
+							<p>
+							  Here is where you control your media remotely. You have your standard controls such as Play, Pause, Rewind, Fast forward and Stop. The seeker bar at the
+							  top shows where the media time is currently located, you can also skip to whichever part of the media you want by moving the seeker thumb. The bottom
+							  seeker bar controls volume.
+							</p>
+							<p>
+                              An extra function called Music Mode allows for the playing of media in the background. Once enabled the window will not be visible, this allows for
+							  seemless music playback without interruption while you're still using the computer.
+							</p>
+							<a href="#index">Back to index</a>
+							</br>
+							</br>
+							<hr>
+
+							<h2>Android Cast Server</h2>
+							</br>
+							<center id="server_main_menu"><a href="../images/android-cast/android-cast-server-main-menu.png"><img alt="Server main menu" src="../images/android-cast/android-cast-server-main-menu.png" width="600px"/></a></center>
+							<h3>Server main menu</h3>
+							<p>
+							  This is the main menu of the Android Cast Server application. Once started, the server exists in the background and can be accessed via the notification
+							  area on the taskbar. Clicking on the red icon shown below will open the menu you see above. This menu allows for playlist viewing, directory loading, help
+							  and server configuration.
+							</p>
+							<center><img alt="Server taskbar service" src="../images/android-cast/android-cast-server-taskbar-service.png" style="border-radius:20px;"/></center>
+							<p>
+                              The servers UI is kept simple in order to provide a good non intrusive user experience and tooltips are used to provide context for each component. The
+							  first button Load allows to load a directory of media files for just this session to the playlist. Settings, which we will delve deeper into next section,
+							  is where all the server configuration happens. Help opens up a help page that shows users how to use the media server. Finally Shutdown, exits the server
+							  and severs all client connections.
+							</p>
+							<a href="#index">Back to index</a>
+							</br>
+							<hr>
+							</br>
+
+							<center id="server_settings_menu"><a href="../images/android-cast/android-cast-server-settings-menu.png"><img alt="Server settings menu" src="../images/android-cast/android-cast-server-settings-menu.png" width="600px"/></a></center>
+							<h3>Server settings menu</h3>
+							<p>
+							  Here is where all the server configuration happens. At the top we have the Monitored Directories section, it shows which folders are constantly monitored
+							  for media files and the playlist is a reflection of what is found here. If a change has been detected, for example a folder or media file has been moved
+							  or removed then the server will make the appropriate changes to the playlist then transmits the new changes to the connected clients.
+							</p>
+							<p>
+							  The buttons below the monitored list are used to add new directories, remove old directories or clear the whole list. A slider is used to control the search
+							  pattern delay, the lowest delay will detect changes in real time. Of course not all computers will be able to handle real time searching, for the best results
+							  a quad core processor is required because of the servers multi-threaded nature. Regardless, the slider is there for the less powerful computers that don't want
+							  their entire CPU consumed by the algorithm.
+							</p>
+							<p>
+							  The server name is used as a label for discovery and is returned to the client during the SSDP search. Below the name text input is the password input here the
+							  default password can be changed, the password is used for logging into the server through a client.
+							</p>
+							<p>
+							  These three checkboxs at the bottom are handy server functions which might help improve your experience with the server if they're required. The first, Minimize
+							  Windows, if enabled everytime the play button is pressed or a new media file played will attempt to minimize every window on the desktop to ensure the media player
+							  receives focus, this is rarely needed but a nice option to have.
+							</p>
+							<p>
+							  The second checkbox, Deep Search, if enabled it turns the search algorithm into a recursive search which will search every folder found within each monitored/loaded
+							  directory and will keep searching them until disabled. This is great if you don't want to add each folder itself and lets the server do all the hard work. However
+							  this is an expensive operation and will require a powerful computer to keep on. If you're experiencing slowdowns, this is the first option I'd target for optimum
+							  performance.
+							</p>
+							<p>
+							  Music mode allows for playing media in the background, once enabled, the media window will not be visible. It can be made visible at any point simply by disabling
+							  music mode. This option can be enabled from the client for ease of use.
+							</p>
+							<a href="#index">Back to index</a>
+							</br>
+							<hr>
+							</br>
+
+							<center id="server_out_of_process_player"><a href="../images/android-cast/android-cast-server-out-of-process-player.png"><img alt="Server settings menu" src="../images/android-cast/android-cast-server-out-of-process-player.png" width="600px"/></a></center>
+							<h3>Server Out of Process Player</h3>
+							<p>
+							  Here is where the magic happens. The server uses VLCJ to provide an implementation of libVLC, the famed open source media player. The media player implementation is
+							  a separate program from the server itself and thus labelled "Out of Process". Once the server receives a command to play a file, it bootstraps the OOP which then
+							  waits for the server to connect via a Interprocess socket. The OOP takes the media file info through the socket and uses it to play the media. An asynchronous I/O
+							  bridge is set up which allows the OOP to receive commands and pass information from VLCJ/LibVLC back through the server and then to each connected client.
+							</p>
+							<p>
+							  You might be wondering why bother going with an Out of Process Player when it could've easily been added to the server without the interprocess coms. Well it
+							  wasn't by choice that's for sure and the player was originally part of the server executable as a whole. I found out pretty late on in development that VLCJ leaks
+							  a significant amount of memory (10MB~) everytime the same media player implmentation is used to play another file. I think it's got something to do with native
+							  threads not being cleaned up correctly when in contact with LibVLC. Because of this, I couldn't reuse the same created media player in memory over and over,
+							  I needed the memory to be forcibly released once the media was finished. The only way to do this was to have it as a separate running program unfortunately.
+							  This issue will likely never be fixed as it has been around for atleast two years and the author of VLCJ uses linux mostly and that OS is not showing the same
+							  bug.
+							</p>
+							<a href="#index">Back to index</a>
+							</br>
+							<hr>
+							</br>
+							<h3 id="licensing_and_distribution">Licensing and distribution</h3>
+							<p>
+							  The server and OOP will be GPL as VLCJ and LibVLC are both open source and licensed under GPL3. This allows anyone to modify/distribute the server/oop source and
+							  installer. The code will be available online shortly free of charge. However, anyone wishing for the full development package, i.e resources, install scripts or
+							  documentation will be required to pay a small handling fee as the project is quite large and will take time to gather and distribute through the medium of your
+							  choice.
+							</p>
+
+							<p>
+							  The client is exempt from this license as it is not distributed with the server/oop and does not use any GPL code, it simply provides interoperability to the server.
+							  It will be available on the Android Marketplace once the beta stage is completed.
+							</p>
+							<a href="#index">Back to index</a>
+							</br>
+							<hr>
+							</br>
+						</div>
+					</div>
+					<!-- Footer padding -->
+					<div id="footer-padding"></div>
+					<!-- Footer -->
+					<div id="footer">
+						<p> All Rights Reserved (C) 2017 Owen McMonagle</p>
+					</div>
+
+				</div>
+			</div>
+	</div>
+	<script type="text/javascript" src="javascript/main.js"></script>
+  </body>
+
+</html>
