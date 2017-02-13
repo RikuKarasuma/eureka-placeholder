@@ -4,4 +4,33 @@
   <welcome-file-list>
     <welcome-file>Home.html</welcome-file>
   </welcome-file-list>
+  
+  <!-- Visit Counter -->
+  <servlet>
+	<servlet-name>Counter</servlet-name>
+	<servlet-class>xyz.eureka.software.counter.Counter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Counter</servlet-name>
+  	<url-pattern>/visit</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Status Page -->
+  <servlet>
+	<servlet-name>Manager</servlet-name>
+	<servlet-class>xyz.eureka.software.manager.StatReader</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Manager</servlet-name>
+  	<url-pattern>/status</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </web-app>

@@ -32,3 +32,23 @@ if(document.cookie == null && is_ms_browser)
 	window.alert("Software Eureka: Your browser is out of date! Please update to a newer web browser, like google chrome or firefox. \n\nWe cannot" +
 			" ensure your experience will be the best the site has to offer.");
 }
+
+var asyncRequest;
+
+function start()
+{
+    try
+    {
+        asyncRequest = new XMLHttpRequest();
+        asyncRequest.addEventListener("readystatechange", null, false);
+        asyncRequest.open('GET', 'visit', true);    //   /Test is url to Servlet!
+        asyncRequest.send(null);
+    }
+    catch(exception)
+    {
+		alert("Request failed");
+    }
+}
+
+window.addEventListener("load", start(), false);
+
