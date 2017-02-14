@@ -25,7 +25,6 @@ public final class Counter extends HttpServlet
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
 		pageVisits++;
-		System.out.println(pageVisits);
 	}
 	
 	/**
@@ -55,5 +54,7 @@ public final class Counter extends HttpServlet
 	public static void setPageVisits(int page_visits)
 	{
 		pageVisits = page_visits;
+		System.out.println("Passed: "+page_visits);
+		System.out.println("Now: "+ pageVisits);
 	}
 }

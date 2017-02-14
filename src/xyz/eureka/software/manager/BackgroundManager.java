@@ -24,26 +24,25 @@ public final class BackgroundManager implements ServletContextListener
 		
 		// Get saved page visits.
 		final int page_visits = new ReadVisitors().getVisitors();
-		
 		// Set page visits for incrementing.
 		Counter.setPageVisits(page_visits);
 		
-		// Create new scheduled thread. 
+		// Create new scheduled thread.
 		scheduler = Executors.newSingleThreadScheduledExecutor();
 		
 		// Schedule saving visitors to file every thirty minutes. 
-		scheduler.scheduleAtFixedRate(new SaveVisitors(), 0, 30, TimeUnit.MINUTES);
+		scheduler.scheduleAtFixedRate(new SaveVisitors(), 30, 30, TimeUnit.MINUTES);
 	}
 	
 	@Override
 	public void contextDestroyed(ServletContextEvent event)
 	{
-		System.out.println("deinitializing");
+		System.out.println("Deinitializing");
 		
 		// Destroy scheduled thread.
 		scheduler.shutdownNow();
 		
-		// Save visitors to file before shutting down. 
+		// Save visitors to file before shutting down.
 		new SaveVisitors().run();
 	}
 }
