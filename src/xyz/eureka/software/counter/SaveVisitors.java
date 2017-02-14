@@ -66,6 +66,7 @@ public final class SaveVisitors implements Runnable
 			{
 				retry = true;
 				waitFor();
+				e.printStackTrace();
 			}
 			catch(IOException e)
 			{

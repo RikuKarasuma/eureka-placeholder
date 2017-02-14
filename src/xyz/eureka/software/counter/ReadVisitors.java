@@ -74,6 +74,7 @@ public final class ReadVisitors
 			{
 				retry = true;
 				waitFor();
+				e.printStackTrace();
 			}
 			catch(IOException e)
 			{

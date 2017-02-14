@@ -3,6 +3,9 @@
   <display-name>Software Eureka</display-name>
   <welcome-file-list>
     <welcome-file>Home.html</welcome-file>
+    <welcome-file>Contact.html</welcome-file>
+    <welcome-file>Portfolio.html</welcome-file>
+    <welcome-file>Tips-and-tricks.html</welcome-file>
   </welcome-file-list>
   
   <!-- Visit Counter -->
