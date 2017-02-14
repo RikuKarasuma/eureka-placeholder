@@ -8,7 +8,9 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.FileLock;
 import java.nio.channels.OverlappingFileLockException;
 
-public class SaveVisitors implements Runnable
+import xyz.eureka.software.manager.DeploymentGlobals;
+
+public final class SaveVisitors implements Runnable
 {
 
 	/**
@@ -17,6 +19,15 @@ public class SaveVisitors implements Runnable
 	@Override
 	public void run()
 	{
+		// Int length.
+		final int int_length = 4,
+				  visits = Counter.getPageVisitsAndReset();
+		
+		// If no visits are to be saved...
+		if(visits <= 0)
+			// just return without saving anything.
+			return;
+		
 		RandomAccessFile file = null;
 		FileChannel channel = null;
 		FileLock lock = null;
@@ -27,8 +38,7 @@ public class SaveVisitors implements Runnable
 			try
 			{
 				// Create paths.
-				String directory = System.getenv("SystemDrive") + System.getenv("HOMEPATH") + "\\",
-						file_path = directory + "counter.log";
+				String file_path = DeploymentGlobals.getVisitorFilePath();
 				
 				// Get file instance.
 				File locked_stats_file = new File(file_path);
@@ -42,9 +52,6 @@ public class SaveVisitors implements Runnable
 				
 				retry = false;
 				
-				// Int length.
-				final int int_length = 4,
-						  visits = Counter.getPageVisitsAndReset();
 				// Allocate byte buffer.
 				ByteBuffer out_buffer = ByteBuffer.allocate(int_length).putInt(visits);
 				// Flip buffer for writing.

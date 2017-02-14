@@ -8,6 +8,8 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.FileLock;
 import java.nio.channels.OverlappingFileLockException;
 
+import xyz.eureka.software.manager.DeploymentGlobals;
+
 public final class ReadVisitors
 {
 	
@@ -49,8 +51,7 @@ public final class ReadVisitors
 			try
 			{
 				// Create paths.
-				String directory = System.getenv("SystemDrive") + System.getenv("HOMEPATH") + "\\",
-						file_path = directory + "counter.log";
+				String file_path = DeploymentGlobals.getVisitorFilePath();
 				
 				// Get file instance.
 				File locked_stats_file = new File(file_path);
