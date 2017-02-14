@@ -7,7 +7,8 @@ package xyz.eureka.software.manager;
  */
 public final class DeploymentGlobals
 {
-	private static final String VISITOR_FILE_PATH = "/var/lib/openshift/58a2c63a7628e1c4ab00014f/app-root/runtime/dependencies/jbossews/webapps/Counter.log";
+	
+	private static final String VISITOR_FILE_PATH = "/var/lib/openshift/58977dab89f5cf8dea000118/app-root/runtime/dependencies/jbossews/webapps/Counter.log";
 	
 	public static String getVisitorFilePath()
 	{
