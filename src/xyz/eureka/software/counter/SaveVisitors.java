@@ -104,7 +104,7 @@ public final class SaveVisitors implements Runnable
 			}
 			catch(InterruptedException e1)
 			{
-				
+				e1.printStackTrace();
 			}
 		}
 	}
