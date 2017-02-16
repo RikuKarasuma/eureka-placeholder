@@ -18,10 +18,11 @@ public final class BackgroundManager implements ServletContextListener
 	@Override
 	public void contextInitialized(ServletContextEvent event) 
 	{
-		System.err.println("Initializing");
-		
 		// Get saved page visits.
-		final int page_visits = new ReadVisitors().getVisitors();
+		final int page_visits = new ReadVisitors().getVisitors(),
+				// Scheduled job delay.
+				scheduled_delay = 30;
+		
 		// Set page visits for incrementing.
 		Counter.setPageVisits(page_visits);
 		
@@ -29,14 +30,12 @@ public final class BackgroundManager implements ServletContextListener
 		scheduler = Executors.newSingleThreadScheduledExecutor();
 		
 		// Schedule saving visitors to file every thirty minutes. 
-		scheduler.scheduleAtFixedRate(new SaveVisitors(), 30, 30, TimeUnit.MINUTES);
+		scheduler.scheduleAtFixedRate(new SaveVisitors(), scheduled_delay, scheduled_delay, TimeUnit.MINUTES);
 	}
 	
 	@Override
 	public void contextDestroyed(ServletContextEvent event)
 	{
-		System.err.println("Deinitializing");
-		
 		// Destroy scheduled thread.
 		scheduler.shutdownNow();
 		

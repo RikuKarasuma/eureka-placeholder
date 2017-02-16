@@ -21,7 +21,7 @@ public final class SaveVisitors implements Runnable
 	{
 		// Int length.
 		final int int_length = 4,
-				  visits = Counter.getPageVisitsAndReset();
+				  visits = Counter.getPageVisits();
 		
 		// If no visits are to be saved...
 		if(visits <= 0)

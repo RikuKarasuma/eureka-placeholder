@@ -28,17 +28,6 @@ public final class Counter extends HttpServlet
 	}
 	
 	/**
-	 * Gets pages visits then resets the number.
-	 * @return int - page visits.
-	 */
-	public static int getPageVisitsAndReset()
-	{
-		final int page_visits = pageVisits;
-		pageVisits = 0;
-		return page_visits;
-	}
-	
-	/**
 	 * Returns just the page visits.
 	 * @return int - page visits.
 	 */

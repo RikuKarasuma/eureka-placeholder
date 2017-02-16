@@ -1,3 +1,5 @@
+
+// Function to check IE version.
 function msieversion() 
 {
     var ua = window.navigator.userAgent;
@@ -9,6 +11,7 @@ function msieversion()
     	return false;
 }
 
+// Function to check IE version.
 function msieversion11() 
 {
 
@@ -29,20 +32,19 @@ if(document.cookie == null && is_ms_browser)
 {
 	document.cookie = "warning_shown=true;";
 	
-	window.alert("Software Eureka: Your browser is out of date! Please update to a newer web browser, like google chrome or firefox. \n\nWe cannot" +
-			" ensure your experience will be the best the site has to offer.");
+	window.alert("Software Eureka: Your browser is out of date! Please update to a newer web browser, like google chrome or firefox. \n\n Some designs won't display correctly.");
 }
 
-var asyncRequest;
 
-function start()
+//AJAX call for visit counting.
+function incrementVisit()
 {
     try
     {
-        asyncRequest = new XMLHttpRequest();
-        asyncRequest.addEventListener("readystatechange", null, false);
-        asyncRequest.open('GET', 'visit', true);    //   /Test is url to Servlet!
-        asyncRequest.send(null);
+    	var async_visit_call = new XMLHttpRequest();
+        async_visit_call.addEventListener("readystatechange", null, false);
+        async_visit_call.open('GET', 'visit', true);
+        async_visit_call.send(null);
     }
     catch(exception)
     {
@@ -50,5 +52,7 @@ function start()
     }
 }
 
-window.addEventListener("load", start(), false);
+
+// Add listener to fire AJAX call. 
+window.addEventListener("load", incrementVisit(), false);
 
